@@ -19,6 +19,16 @@
             "location": "/Ramblings/#ramblings",
             "text": "A collection of miscellaneous blogs and ramblings.",
             "title": "Ramblings"
+        },
+        {
+            "location": "/Ramblings/2016/January/Long File Names/",
+            "text": "How to delete a file with too long of file extension (Windows)\n\n\nWhen you want to completely delete a directory and it has file with long names inside it, robocopy does a VERY good job:\n\n\nmkdir empty_dir\nrobocopy empty_dir the_dir_to_delete /s /mir\nrmdir empty_dir\nrmdir the_dir_to_delete",
+            "title": "Long File Names"
+        },
+        {
+            "location": "/Ramblings/2016/January/Long File Names/#how-to-delete-a-file-with-too-long-of-file-extension-windows",
+            "text": "When you want to completely delete a directory and it has file with long names inside it, robocopy does a VERY good job:  mkdir empty_dir\nrobocopy empty_dir the_dir_to_delete /s /mir\nrmdir empty_dir\nrmdir the_dir_to_delete",
+            "title": "How to delete a file with too long of file extension (Windows)"
         }
     ]
 }
