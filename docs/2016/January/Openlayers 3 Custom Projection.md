@@ -34,3 +34,28 @@ ol.proj.addCoordinateTransforms(
 ```
 
 As noted above, the proj4 definitions for most projections can be found at [Spatial Reference](http://spatialreference.org/)
+
+Now openlayers will automatically transform GeoJSON features when asked to convert between these two coordinate systems. For example, lets say we have a GeoJSON object, `feature`:
+
+```javascript
+//feature is our GeoJSON object
+var proj = map.getMap().getView().getProjection();
+var gjson = new ol.format.GeoJSON();
+var f = gjson.readFeature(feature, {
+  dataProjection: gjson.readProjection(feature),
+  featureProjection: proj
+});
+```
+
+Openlayers will call our inverse function above to create the geometry. This feature can now be added to a vector layer and added to the map.
+
+```javascript
+var source = new ol.source.Vector({
+  features: [f]
+});
+var layer = new ol.layer.Vector({
+  title: 'Identify Results',
+  source: source
+});
+map.addLayer(layer);
+```
