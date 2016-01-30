@@ -205,8 +205,8 @@
 
 <h1 id="openlayers-3-ol3-custom-projections-using-proj4">Openlayers 3 (OL3) Custom projections using proj4</h1>
 <p>Custom projections are a little tricky in web applications. In openlayers 3 there are several steps to take to completely support a custom projection in mapping and transformations.</p>
-<p>```javascript
-//add custom projections to proj4
+<p>```javascript</p>
+<p>//add custom projections to proj4
 //This can be found on http://spatialreference.org/
 proj4.defs('EPSG:26986', '+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs');</p>
 <p>//add an alias to quickly reference
@@ -231,8 +231,8 @@ ol.proj.addCoordinateTransforms(
     return proj4(
       proj4.defs['EPSG:900913'], proj4.defs['EPSG:26986'],
       coords);
-  });
-  ```</p>
+  });</p>
+<p>```</p>
 <p>As noted above, the proj4 definitions for most projections can be found at <a href="http://spatialreference.org/">Spatial Reference</a></p></div>
     
     <div id="disqus_thread"></div>
