@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Random ideas that may be helpful later"> 
-  <meta name="author" content="roemhildtg">  
-  <link rel="shortcut icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="author" content="roemhildtg"> 
+  <link rel="canonical" href="http://roemhildtg.github.io/2016/January/Openlayers 3 Custom Projection/"> 
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-  <title>Thoughts and Ramblings</title>
+  <title>Openlayers 3 Custom Projection - Thoughts and Ramblings</title>
 
-  <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+  <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
   <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-  <link href="./css/base.css" rel="stylesheet">
-  <link href="./css/cinder.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/highlight.css">
+  <link href="../../../css/base.css" rel="stylesheet">
+  <link href="../../../css/cinder.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/highlight.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -56,7 +56,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Thoughts and Ramblings</a>
+            <a class="navbar-brand" href="../../..">Thoughts and Ramblings</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -67,7 +67,7 @@
                 
                 
                     <li >
-                        <a href=".">Home</a>
+                        <a href="../../..">Home</a>
                     </li>
                 
                 
@@ -83,31 +83,31 @@
         
             
 <li >
-    <a href="2015/January/ArcMap Metadata Update/#disqus_thread">ArcMap Metadata Update</a>
+    <a href="../../../2015/January/ArcMap Metadata Update/#disqus_thread">ArcMap Metadata Update</a>
 </li>
 
         
             
 <li >
-    <a href="2015/January/Install Skype In OpenSUSE/#disqus_thread">Install Skype In OpenSUSE</a>
+    <a href="../../../2015/January/Install Skype In OpenSUSE/#disqus_thread">Install Skype In OpenSUSE</a>
 </li>
 
         
             
 <li >
-    <a href="2015/January/MP495 Install Linux/#disqus_thread">MP495 Install Linux</a>
+    <a href="../../../2015/January/MP495 Install Linux/#disqus_thread">MP495 Install Linux</a>
 </li>
 
         
             
 <li >
-    <a href="2015/January/Quick Media Center/#disqus_thread">Quick Media Center</a>
+    <a href="../../../2015/January/Quick Media Center/#disqus_thread">Quick Media Center</a>
 </li>
 
         
             
 <li >
-    <a href="2015/January/Sharepoint Scroll Bug/#disqus_thread">Sharepoint Scroll Bug</a>
+    <a href="../../../2015/January/Sharepoint Scroll Bug/#disqus_thread">Sharepoint Scroll Bug</a>
 </li>
 
         
@@ -120,7 +120,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">2016 <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -131,19 +131,19 @@
         
             
 <li >
-    <a href="2016/January/ArcMap Advanced Label/#disqus_thread">ArcMap Advanced Label</a>
+    <a href="../ArcMap Advanced Label/#disqus_thread">ArcMap Advanced Label</a>
 </li>
 
         
             
 <li >
-    <a href="2016/January/Long File Names/#disqus_thread">Long File Names</a>
+    <a href="../Long File Names/#disqus_thread">Long File Names</a>
 </li>
 
         
             
-<li >
-    <a href="2016/January/Openlayers 3 Custom Projection/#disqus_thread">Openlayers 3 Custom Projection</a>
+<li class="active">
+    <a href="./#disqus_thread">Openlayers 3 Custom Projection</a>
 </li>
 
         
@@ -165,8 +165,8 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../Long File Names/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -193,16 +193,48 @@
 
   <div class="container">
     
+    <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#openlayers-3-ol3-custom-projections-using-proj4">Openlayers 3 (OL3) Custom projections using proj4</a></li>
+        
+    
+    </ul>
+</div></div>
+    <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-        <p style="text-align: center"><a href=".">Home</a></p>
-      </div>
-    </div>
-
-
+<h1 id="openlayers-3-ol3-custom-projections-using-proj4">Openlayers 3 (OL3) Custom projections using proj4</h1>
+<p>Custom projections are a little tricky in web applications. In openlayers 3 there are several steps to take to completely support a custom projection in mapping and transformations.</p>
+<p>```javascript
+//add custom projections to proj4
+//This can be found on http://spatialreference.org/
+proj4.defs('EPSG:26986', '+proj=lcc +lat_1=42.68333333333333 +lat_2=41.71666666666667 +lat_0=41 +lon_0=-71.5 +x_0=200000 +y_0=750000 +ellps=GRS80 +datum=NAD83 +units=m +no_defs');</p>
+<p>//add an alias to quickly reference
+proj4.defs('urn:ogc:def:crs:EPSG::26986', proj4.defs['EPSG:26986']);
+var mass_proj = new ol.proj.Projection({
+  code: 'urn:ogc:def:crs:EPSG::26986',
+  extent: [31789.1658, 790194.4183, 337250.8970, 961865.1338],
+  units: 'm'
+});</p>
+<p>//add the projection to ol
+ol.proj.addProjection(mass_proj);</p>
+<p>//add projection tranformation functions necessary
+//to transform geojson data
+ol.proj.addCoordinateTransforms(
+  mass_proj, 'EPSG:900913',
+  function forward(coords) {
+    return proj4(
+      proj4.defs['EPSG:26986'], proj4.defs['EPSG:900913'],
+      coords);
+  },
+  function inverse(coords) {
+    return proj4(
+      proj4.defs['EPSG:900913'], proj4.defs['EPSG:26986'],
+      coords);
+  });
+  ```</p>
+<p>As noted above, the proj4 definitions for most projections can be found at <a href="http://spatialreference.org/">Spatial Reference</a></p></div>
+    
     <div id="disqus_thread"></div>
     <script>
       /**
@@ -235,17 +267,17 @@
       <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
   </footer>
 
-  <script src="./js/jquery-1.10.2.min.js"></script>
-  <script src="./js/bootstrap-3.0.3.min.js"></script>
-  <script src="./js/highlight.pack.js"></script>
+  <script src="../../../js/jquery-1.10.2.min.js"></script>
+  <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+  <script src="../../../js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>
   <script>
-    var base_url = '.';
+    var base_url = '../../..';
   </script>
-  <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-  <script src="./js/base.js"></script>
+  <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+  <script src="../../../js/base.js"></script>
 
   <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
