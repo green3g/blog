@@ -1,7 +1,5 @@
-## Projects
-A list of projects I contribute to
 
-### CMV
+# CMV
 A configureable mapping framework built on the ArcGIS for Javascript API
 
 * [Website](http://github.com/cmv/cmv-app)
