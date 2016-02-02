@@ -1,10 +1,23 @@
+# OGR2OGR Cheatsheet
+
+OGR is an incredibly versitile utility for any GIS data transfer task and should probably be a tool in everyone who needs to work with different types of data. OGR2OGR takes countless parameters (hence the cheatsheet) but when used correctly it can be used to automate tasks that would take hours using other methods. These are all batch files, but they can be easily converted to linux or mac bash files. 
+
 ## PostGIS to Shapefile
+We'll start small. This one takes a single table and turns it into a shape file. Set the parameters and run. Easy enough.
 
 ```batch
-ogr2ogr -f "ESRI Shapefile" mydata.shp PG:"host=myhost user=myloginname dbname=mydbname password=mypassword" "mytable"
+set host="192.168.0.1"
+set user="admin"
+set password="password"
+set dbname="gisdata"
+set table="table"
+set output="mydata.shp"
+ogr2ogr -f "ESRI Shapefile" %output% PG:"host=%host% user=%user% dbname=%dbname% password=%password%" "%table%"
 ```
 
 ## CAD To Shapefile
+This one is a little more exciting. It takes a cad file, and converts it into three shapefiles (points, lines, polygons). In order for this to work, it needs to have a dxf file input. To create a dxf from a dwg, AutoCad's Save As... menu can be used.
+
 ```batch
 set ogr_path="C:\OSGeo4W\bin\ogr2ogr"
 set dwg_path=%1
@@ -20,6 +33,8 @@ echo ---------------------------------
 ```
 
 ## Esri Geodatabase to PostGIS
+This one I've found incredibly useful. It quickly transfers many layers from a Esri Geodatabase (In fact all layers), and places them into a schema in PostgreSQL. It can even reproject the database. Just set the parameters at the top and run the script.
+
 ```batch
 set default_gdb=C:/data.gdb
 set default_schema=mydata
