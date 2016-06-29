@@ -12,7 +12,7 @@ This short guide will explain how you can easily bring your live postgres tables
 
 Power query is available for free from the Microsoft website. 
 Download the same version (32 bit or 64 bit) as your office installation. 
-[Learn how to check your office version](./Check Excel Version/)
+[Learn how to check your office version](./Check Excel Version.md)
 
 [Get Power Query](https://www.microsoft.com/en-us/download/details.aspx?id=39379)
 
