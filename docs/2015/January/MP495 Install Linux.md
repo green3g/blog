@@ -10,19 +10,24 @@ http://sourceforge.net/projects/cups-bjnp/
 
 To install this library, I also needed to install cups-devel, the development cups library.
 
+```
 sudo zypper in cups-devel
+```
 
 Next we will extract, configure, and install the cups-bjnp library.
 
+```
 cd ~/Downloads #or wherever your downloaded tar is.
  tar -xfv cups-bjnp-1.2.2.tar
  cd cups-bjnp-1.2.2
  ./configure
-
+```
 
 if you didn't get any errors in the previous step, proceed, otherwise do some research to find out what went wrong, if all went well, type:
 
+```
 sudo make install
+```
 
 If everything went well, which it did for me, open YAST from the Activities. Choose Printers, then Add +.
 
